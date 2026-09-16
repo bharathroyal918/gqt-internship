@@ -1,0 +1,788 @@
+// ==============================================================================
+// Global Quest Technologies (GQT) - Production Prisma Schema
+// PostgreSQL Relational Database with Enterprise RBAC, Auditing, and Soft Delete
+// ==============================================================================
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+// ------------------------------------------------------------------------------
+// Enums
+// ------------------------------------------------------------------------------
+
+enum UserStatus {
+  ACTIVE
+  INACTIVE
+  SUSPENDED
+  PENDING_VERIFICATION
+}
+
+enum RoleName {
+  SUPER_ADMIN
+  ADMIN
+  OPERATIONS
+  PLACEMENT_TEAM
+  HR
+  FINANCE
+  CERTIFICATE_TEAM
+  STUDENT
+  PLACEMENT_OFFICER
+  COLLEGE_COORDINATOR
+  COMPANY_HR
+  MENTOR
+  TRAINER
+}
+
+enum PermissionAction {
+  VIEW
+  CREATE
+  EDIT
+  DELETE
+  EXPORT
+  PUBLISH
+  APPROVE
+  REJECT
+  ASSIGN
+}
+
+enum CollegeType {
+  VTU_AFFILIATED
+  AUTONOMOUS
+  DEEMED
+  STATE_GOVERNMENT
+}
+
+enum CompanyTier {
+  ENTERPRISE
+  GROWTH
+  STARTUP
+  GLOBAL
+}
+
+enum HiringStatus {
+  HIRING_ACTIVE
+  HIRING_PAUSED
+  CLOSED
+}
+
+enum VerificationStatus {
+  VERIFIED
+  PENDING
+  REJECTED
+}
+
+enum InternshipMode {
+  HYBRID
+  REMOTE
+  ON_SITE
+}
+
+enum InternshipStatus {
+  DRAFT
+  PUBLISHED
+  CLOSED
+  ARCHIVED
+}
+
+enum ApplicationStatus {
+  APPLIED
+  UNDER_REVIEW
+  SHORTLISTED
+  INTERVIEW_SCHEDULED
+  SELECTED
+  REJECTED
+  OFFER_RELEASED
+  CERTIFICATE_ELIGIBLE
+  WITHDRAWN
+}
+
+enum InterviewStatus {
+  SCHEDULED
+  COMPLETED
+  CANCELLED
+  RESCHEDULED
+}
+
+enum InterviewResult {
+  PENDING
+  PASSED
+  FAILED
+}
+
+enum CertificateStatus {
+  ACTIVE
+  REVOKED
+}
+
+enum NotificationAudience {
+  ALL
+  STUDENTS
+  COLLEGES
+  COMPANIES
+  ADMINS
+}
+
+enum NotificationType {
+  PUSH
+  EMAIL
+  WHATSAPP
+  BANNER
+  IN_APP
+}
+
+enum NotificationPriority {
+  LOW
+  NORMAL
+  HIGH
+  URGENT
+}
+
+enum CircularCategory {
+  LATEST
+  PLACEMENT
+  EXAM
+  TRAINING
+}
+
+enum CircularPriority {
+  NORMAL
+  URGENT
+  CRITICAL
+}
+
+enum EnquiryStatus {
+  NEW
+  IN_PROGRESS
+  RESOLVED
+  CLOSED
+}
+
+enum SubscriptionStatus {
+  SUBSCRIBED
+  UNSUBSCRIBED
+}
+
+enum PaymentPlan {
+  UPFRONT
+  INSTALLMENTS
+  ISA
+}
+
+enum AdmissionStatus {
+  APPLIED
+  ENROLLED
+  GRADUATED
+  DROPPED
+}
+
+enum PaymentStatus {
+  PAID
+  PARTIAL
+  PENDING
+}
+
+enum DriveStatus {
+  UPCOMING
+  ONGOING
+  COMPLETED
+}
+
+// ------------------------------------------------------------------------------
+// 1. Authentication & RBAC Layer
+// ------------------------------------------------------------------------------
+
+model User {
+  id               String       @id @default(uuid())
+  fullName         String
+  email            String       @unique
+  phone            String?      @unique
+  passwordHash     String
+  roleId           String
+  role             Role         @relation(fields: [roleId], references: [id])
+  profilePhoto     String?
+  gender           String?
+  dob              DateTime?
+  status           UserStatus   @default(ACTIVE)
+  lastLogin        DateTime?
+  emailVerified    Boolean      @default(false)
+  phoneVerified    Boolean      @default(false)
+  twoFactorEnabled Boolean      @default(false)
+  preferredTheme   String       @default("light")
+  timezone         String       @default("Asia/Kolkata")
+  language         String       @default("en")
+
+  // Audit Fields
+  createdAt        DateTime     @default(now())
+  updatedAt        DateTime     @updatedAt
+  deletedAt        DateTime?
+  createdBy        String?
+  updatedBy        String?
+  isActive         Boolean      @default(true)
+  version          Int          @default(1)
+
+  // Relations
+  studentProfile   Student?
+  companyHRProfile CompanyHR?
+  notifications    Notification[]
+  auditLogs        AuditLog[]
+  assignedEnquiries ContactEnquiry[]
+
+  @@index([email])
+  @@index([roleId])
+  @@index([status])
+  @@map("users")
+}
+
+model Role {
+  id          String           @id @default(uuid())
+  name        RoleName         @unique
+  displayName String
+  description String?
+  isSystem    Boolean          @default(false)
+
+  // Audit Fields
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+  deletedAt   DateTime?
+  isActive    Boolean          @default(true)
+
+  // Relations
+  users       User[]
+  permissions RolePermission[]
+
+  @@map("roles")
+}
+
+model Permission {
+  id          String           @id @default(uuid())
+  code        String           @unique // e.g. "internships:create"
+  module      String           // e.g. "INTERNSHIPS"
+  action      PermissionAction
+  description String?
+
+  // Audit Fields
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+
+  // Relations
+  roles       RolePermission[]
+
+  @@index([module])
+  @@index([action])
+  @@map("permissions")
+}
+
+model RolePermission {
+  id           String     @id @default(uuid())
+  roleId       String
+  permissionId String
+  role         Role       @relation(fields: [roleId], references: [id], onDelete: Cascade)
+  permission   Permission @relation(fields: [permissionId], references: [id], onDelete: Cascade)
+
+  @@unique([roleId, permissionId])
+  @@map("role_permissions")
+}
+
+model OTPVerification {
+  id         String   @id @default(uuid())
+  identifier String   // email or phone
+  otpHash    String
+  type       String   // "LOGIN", "PASSWORD_RESET", "PHONE_VERIFY"
+  expiresAt  DateTime
+  verified   Boolean  @default(false)
+  createdAt  DateTime @default(now())
+
+  @@index([identifier, type])
+  @@map("otp_verifications")
+}
+
+// ------------------------------------------------------------------------------
+// 2. Institutions & Students
+// ------------------------------------------------------------------------------
+
+model College {
+  id                   String        @id @default(uuid())
+  collegeCode          String        @unique // e.g. "1RV", "1BM"
+  collegeName          String
+  university           String        @default("VTU")
+  type                 CollegeType   @default(VTU_AFFILIATED)
+  district             String
+  state                String        @default("Karnataka")
+  address              String?
+  website              String?
+  placementOfficerName String?
+  coordinatorName      String?
+  contactEmail         String?
+  phone                String?
+  status               String        @default("ACTIVE")
+  csrEnabled           Boolean       @default(true)
+  academicYear         String        @default("2026-2027")
+  logo                 String?
+
+  // Audit Fields
+  createdAt            DateTime      @default(now())
+  updatedAt            DateTime      @updatedAt
+  deletedAt            DateTime?
+  createdBy            String?
+  updatedBy            String?
+  isActive             Boolean       @default(true)
+  version              Int           @default(1)
+
+  // Relations
+  departments          Department[]
+  students             Student[]
+  csrDrives            CSRDrive[]
+
+  @@index([district])
+  @@index([status])
+  @@map("colleges")
+}
+
+model Department {
+  id             String    @id @default(uuid())
+  departmentName String    // e.g. "Computer Science & Engineering"
+  code           String    // e.g. "CSE"
+  collegeId      String
+  college        College   @relation(fields: [collegeId], references: [id], onDelete: Cascade)
+  status         String    @default("ACTIVE")
+
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  students       Student[]
+
+  @@unique([collegeId, code])
+  @@map("departments")
+}
+
+model Student {
+  id                String            @id @default(uuid())
+  userId            String            @unique
+  user              User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  universityNumber  String            @unique // USN, e.g. "1RV23CS041"
+  fullName          String
+  email             String            @unique
+  phone             String?
+  gender            String?
+  dob               DateTime?
+  branch            String
+  semester          Int               @default(6)
+  collegeId         String
+  college           College           @relation(fields: [collegeId], references: [id])
+  departmentId      String?
+  department        Department?       @relation(fields: [departmentId], references: [id])
+  graduationYear    Int               @default(2027)
+  cgpa              Float             @default(0.0)
+  resumeUrl         String?
+  linkedInUrl       String?
+  githubUrl         String?
+  portfolioUrl      String?
+  skills            String[]          @default([])
+  certifications    Json?             @default("[]")
+  projects          Json?             @default("[]")
+  profileCompletion Int               @default(40)
+  status            String            @default("ACTIVE")
+
+  // Audit Fields
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
+  deletedAt         DateTime?
+  version           Int               @default(1)
+
+  // Relations
+  applications      Application[]
+  savedInternships  SavedInternship[]
+  certificates      Certificate[]
+  careerLaunches    CareerLaunch[]
+
+  @@index([universityNumber])
+  @@index([collegeId])
+  @@index([branch])
+  @@index([cgpa])
+  @@map("students")
+}
+
+// ------------------------------------------------------------------------------
+// 3. Corporate Partners & HR
+// ------------------------------------------------------------------------------
+
+model Company {
+  id                 String             @id @default(uuid())
+  name               String             @unique
+  slug               String             @unique
+  industry           String
+  website            String?
+  linkedIn           String?
+  location           String
+  description        String             @db.Text
+  logo               String?
+  banner             String?
+  hiringStatus       HiringStatus       @default(HIRING_ACTIVE)
+  hrContactName      String?
+  hrContactEmail     String?
+  hrContactPhone     String?
+  verificationStatus VerificationStatus @default(VERIFIED)
+  tier               CompanyTier        @default(ENTERPRISE)
+  foundedYear        Int?
+  employees          String?            @default("1000+")
+
+  // Audit Fields
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
+  deletedAt          DateTime?
+  createdBy          String?
+  updatedBy          String?
+  isActive           Boolean            @default(true)
+  version            Int                @default(1)
+
+  // Relations
+  hrs                CompanyHR[]
+  internships        Internship[]
+
+  @@index([industry])
+  @@index([tier])
+  @@index([verificationStatus])
+  @@map("companies")
+}
+
+model CompanyHR {
+  id          String   @id @default(uuid())
+  userId      String   @unique
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  companyId   String
+  company     Company  @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  designation String   @default("Talent Acquisition Partner")
+  status      String   @default("ACTIVE")
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("company_hrs")
+}
+
+// ------------------------------------------------------------------------------
+// 4. Internships & Applications
+// ------------------------------------------------------------------------------
+
+model Internship {
+  id                  String            @id @default(uuid())
+  internshipCode      String            @unique // e.g. "GQT-INT-001"
+  title               String
+  slug                String            @unique
+  companyId           String
+  company             Company           @relation(fields: [companyId], references: [id])
+  mode                InternshipMode    @default(HYBRID)
+  location            String
+  duration            String            @default("3 Months")
+  startDate           DateTime?
+  endDate             DateTime?
+  applicationDeadline DateTime
+  eligibility         String            @db.Text
+  skills              String[]          @default([])
+  description         String            @db.Text
+  responsibilities    String[]          @default([])
+  learningOutcomes    String[]          @default([])
+  perks               String[]          @default([])
+  certificateAvailable Boolean          @default(true)
+  stipend             String            @default("₹12,000 / month")
+  stipendAmount       Int               @default(12000)
+  seats               Int               @default(5)
+  category            String            @default("AI Internship")
+  status              InternshipStatus  @default(PUBLISHED)
+  featured            Boolean           @default(false)
+  published           Boolean           @default(true)
+
+  // Audit Fields
+  createdAt           DateTime          @default(now())
+  updatedAt           DateTime          @updatedAt
+  deletedAt           DateTime?
+  createdBy           String?
+  updatedBy           String?
+  isActive            Boolean           @default(true)
+  version             Int               @default(1)
+
+  // Relations
+  applications        Application[]
+  savedByStudents     SavedInternship[]
+  certificates        Certificate[]
+
+  @@index([companyId])
+  @@index([category])
+  @@index([status])
+  @@index([featured])
+  @@index([stipendAmount])
+  @@map("internships")
+}
+
+model Application {
+  id                 String            @id @default(uuid())
+  studentId          String
+  student            Student           @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  internshipId       String
+  internship         Internship        @relation(fields: [internshipId], references: [id], onDelete: Cascade)
+  appliedDate        DateTime          @default(now())
+  resumeSnapshotUrl  String?
+  coverLetter        String?           @db.Text
+  status             ApplicationStatus @default(APPLIED)
+  remarks            String?           @db.Text
+
+  // Audit Fields
+  createdAt          DateTime          @default(now())
+  updatedAt          DateTime          @updatedAt
+  deletedAt          DateTime?
+  version            Int               @default(1)
+
+  // Relations
+  interviews         Interview[]
+
+  @@unique([studentId, internshipId])
+  @@index([status])
+  @@index([appliedDate])
+  @@map("applications")
+}
+
+model SavedInternship {
+  id             String     @id @default(uuid())
+  studentId      String
+  student        Student    @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  internshipId   String
+  internship     Internship @relation(fields: [internshipId], references: [id], onDelete: Cascade)
+  savedTimestamp DateTime   @default(now())
+
+  @@unique([studentId, internshipId])
+  @@map("saved_internships")
+}
+
+model Interview {
+  id               String          @id @default(uuid())
+  applicationId    String
+  application      Application     @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+  interviewRound   Int             @default(1)
+  roundName        String          @default("Technical Round 1")
+  date             DateTime
+  time             String          @default("11:00 AM IST")
+  meetingLink      String?         // Google Meet link
+  interviewerName  String?
+  interviewerEmail String?
+  status           InterviewStatus @default(SCHEDULED)
+  feedback         String?         @db.Text
+  result           InterviewResult @default(PENDING)
+
+  createdAt        DateTime        @default(now())
+  updatedAt        DateTime        @updatedAt
+
+  @@index([applicationId])
+  @@index([status])
+  @@map("interviews")
+}
+
+model Certificate {
+  id               String            @id @default(uuid())
+  certificateNumber String           @unique // e.g. "GQT-CERT-2026-94812"
+  studentId        String
+  student          Student           @relation(fields: [studentId], references: [id])
+  internshipId     String
+  internship       Internship        @relation(fields: [internshipId], references: [id])
+  verificationCode String            @unique // SHA-256 hash or secure hex token
+  issueDate        DateTime          @default(now())
+  expiryDate       DateTime?
+  pdfUrl           String?
+  status           CertificateStatus @default(ACTIVE)
+
+  // Audit Fields
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
+  deletedAt        DateTime?
+
+  @@index([certificateNumber])
+  @@index([verificationCode])
+  @@index([studentId])
+  @@map("certificates")
+}
+
+// ------------------------------------------------------------------------------
+// 5. Communications & Directives
+// ------------------------------------------------------------------------------
+
+model Notification {
+  id          String               @id @default(uuid())
+  userId      String?              // null if broadcast
+  user        User?                @relation(fields: [userId], references: [id], onDelete: Cascade)
+  audience    NotificationAudience @default(ALL)
+  title       String
+  description String               @db.Text
+  type        NotificationType     @default(IN_APP)
+  priority    NotificationPriority @default(NORMAL)
+  isRead      Boolean              @default(false)
+  metadata    Json?
+
+  createdAt   DateTime             @default(now())
+  updatedAt   DateTime             @updatedAt
+
+  @@index([userId])
+  @@index([audience])
+  @@index([isRead])
+  @@map("notifications")
+}
+
+model Circular {
+  id              String           @id @default(uuid())
+  circularNumber  String           @unique // e.g. "VTU/ACA/2026/104"
+  title           String
+  category        CircularCategory @default(LATEST)
+  description     String           @db.Text
+  richTextContent String?          @db.Text
+  attachmentUrl   String?
+  isPinned        Boolean          @default(false)
+  isPublished     Boolean          @default(true)
+  priority        CircularPriority @default(NORMAL)
+  issueDate       DateTime         @default(now())
+  expiryDate      DateTime?
+
+  // Audit Fields
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+  deletedAt       DateTime?
+
+  @@index([category])
+  @@index([isPinned])
+  @@index([isPublished])
+  @@map("circulars")
+}
+
+model Partner {
+  id          String   @id @default(uuid())
+  companyName String
+  logoUrl     String
+  websiteUrl  String?
+  priority    Int      @default(0)
+  isVisible   Boolean  @default(true)
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([priority])
+  @@index([isVisible])
+  @@map("partners")
+}
+
+model ContactEnquiry {
+  id               String        @id @default(uuid())
+  name             String
+  email            String
+  phone            String?
+  subject          String
+  message          String        @db.Text
+  status           EnquiryStatus @default(NEW)
+  assignedToUserId String?
+  assignedTo       User?         @relation(fields: [assignedToUserId], references: [id])
+
+  createdAt        DateTime      @default(now())
+  updatedAt        DateTime      @updatedAt
+
+  @@index([status])
+  @@map("contact_enquiries")
+}
+
+model Newsletter {
+  id                 String             @id @default(uuid())
+  email              String             @unique
+  subscriptionStatus SubscriptionStatus @default(SUBSCRIBED)
+  source             String             @default("FOOTER")
+
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
+
+  @@map("newsletters")
+}
+
+// ------------------------------------------------------------------------------
+// 6. Programs, CSR Drives & Operations
+// ------------------------------------------------------------------------------
+
+model CareerLaunch {
+  id              String          @id @default(uuid())
+  studentId       String
+  student         Student         @relation(fields: [studentId], references: [id])
+  courseName      String
+  paymentPlan     PaymentPlan     @default(INSTALLMENTS)
+  admissionStatus AdmissionStatus @default(ENROLLED)
+  batchCode       String
+  counselorName   String?
+  totalFee        Float           @default(25000)
+  amountPaid      Float           @default(10000)
+  remainingFee    Float           @default(15000)
+  paymentStatus   PaymentStatus   @default(PARTIAL)
+
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+
+  @@index([studentId])
+  @@index([paymentStatus])
+  @@map("career_launches")
+}
+
+model CSRDrive {
+  id               String      @id @default(uuid())
+  driveName        String
+  collegeId        String
+  college          College     @relation(fields: [collegeId], references: [id])
+  coordinatorName  String?
+  status           DriveStatus @default(ONGOING)
+  startDate        DateTime
+  endDate          DateTime?
+  batchCode        String
+  groupLink        String?
+  whatsAppGroupId  String?
+
+  createdAt        DateTime    @default(now())
+  updatedAt        DateTime    @updatedAt
+
+  @@index([collegeId])
+  @@index([status])
+  @@map("csr_drives")
+}
+
+// ------------------------------------------------------------------------------
+// 7. Audit Logging & System Settings
+// ------------------------------------------------------------------------------
+
+model AuditLog {
+  id        String   @id @default(uuid())
+  entity    String   // e.g. "Internship", "Application", "College"
+  entityId  String
+  action    String   // e.g. "CREATE", "UPDATE", "DELETE", "STATUS_CHANGE"
+  oldValue  Json?
+  newValue  Json?
+  ipAddress String?
+  userAgent String?
+  userId    String?
+  user      User?    @relation(fields: [userId], references: [id])
+  timestamp DateTime @default(now())
+
+  @@index([entity, entityId])
+  @@index([userId])
+  @@index([timestamp])
+  @@map("audit_logs")
+}
+
+model SystemSetting {
+  id          String   @id @default(uuid())
+  key         String   @unique
+  value       String   @db.Text
+  category    String   @default("GENERAL") // "SMTP", "CLOUDINARY", "WHATSAPP", "BRANDING"
+  isEncrypted Boolean  @default(false)
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([category])
+  @@map("system_settings")
+}

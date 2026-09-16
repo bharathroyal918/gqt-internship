@@ -1,0 +1,137 @@
+[
+  {
+    "id": "notif-1",
+    "title": "Application Shortlisted!",
+    "message": "Your application for Generative AI Research Intern at Infosys Labs was shortlisted.",
+    "timestamp": "10 mins ago",
+    "type": "application",
+    "read": false,
+    "link": "/dashboard/applications"
+  },
+  {
+    "id": "notif-2",
+    "title": "New Interview Scheduled",
+    "message": "Technical Round 1 with Razorpay Engineering is set for tomorrow at 11:30 AM.",
+    "timestamp": "2 hours ago",
+    "type": "interview",
+    "read": false,
+    "link": "/dashboard/applications"
+  },
+  {
+    "id": "notif-3",
+    "title": "New Official Circular",
+    "message": "VTU released mandatory guidelines for 8th semester internship documentation.",
+    "timestamp": "5 hours ago",
+    "type": "circular",
+    "read": true,
+    "link": "/#circulars"
+  },
+  {
+    "id": "notif-4",
+    "title": "Certificate Ready for Download",
+    "message": "Your Java Cloud Developer completion certificate is verified and ready.",
+    "timestamp": "1 day ago",
+    "type": "system",
+    "read": true,
+    "link": "/dashboard/certificates"
+  },
+  {
+    "id": "notif-5",
+    "title": "Profile Strength: 85%",
+    "message": "Add your GitHub and LinkedIn links to boost your recruiter discovery score.",
+    "timestamp": "2 days ago",
+    "type": "system",
+    "read": false,
+    "link": "/dashboard/profile"
+  },
+  {
+    "id": "notif-6",
+    "title": "Stipend Disbursed",
+    "message": "August month stipend of ₹24,000 processed by Global Quest Labs.",
+    "timestamp": "3 days ago",
+    "type": "application",
+    "read": true,
+    "link": "/dashboard"
+  },
+  {
+    "id": "notif-7",
+    "title": "Placement Drive Registration Open",
+    "message": "Over 40 tech companies hiring 2026 batch interns at Bengaluru Tech Summit.",
+    "timestamp": "4 days ago",
+    "type": "circular",
+    "read": true,
+    "link": "/#circulars"
+  },
+  {
+    "id": "notif-8",
+    "title": "Application Under Review",
+    "message": "PhonePe recruiter has viewed your resume and project portfolio.",
+    "timestamp": "5 days ago",
+    "type": "application",
+    "read": true,
+    "link": "/dashboard/applications"
+  },
+  {
+    "id": "notif-9",
+    "title": "Upcoming Webinar Reminder",
+    "message": "Mastering System Design Interviews - Free session this Saturday at 6 PM.",
+    "timestamp": "6 days ago",
+    "type": "training",
+    "read": true,
+    "link": "/about"
+  },
+  {
+    "id": "notif-10",
+    "title": "Weekly Progress Log Due",
+    "message": "Submit your weekly task summary to your college mentor before Sunday midnight.",
+    "timestamp": "1 week ago",
+    "type": "system",
+    "read": true,
+    "link": "/dashboard"
+  },
+  {
+    "id": "notif-11",
+    "title": "Password Changed Successfully",
+    "message": "Security alert: Your account password was updated from a known device.",
+    "timestamp": "1 week ago",
+    "type": "system",
+    "read": true,
+    "link": "/dashboard/settings"
+  },
+  {
+    "id": "notif-12",
+    "title": "Offer Letter Generated",
+    "message": "Congratulations! Bosch Global Software has released your formal offer letter.",
+    "timestamp": "2 weeks ago",
+    "type": "application",
+    "read": true,
+    "link": "/dashboard/applications"
+  },
+  {
+    "id": "notif-13",
+    "title": "Feedback Request",
+    "message": "Rate your completed internship experience to help your juniors on the portal.",
+    "timestamp": "2 weeks ago",
+    "type": "system",
+    "read": true,
+    "link": "/dashboard"
+  },
+  {
+    "id": "notif-14",
+    "title": "College NOC Approved",
+    "message": "Your internal placement officer approved your off-campus remote internship.",
+    "timestamp": "3 weeks ago",
+    "type": "application",
+    "read": true,
+    "link": "/dashboard/applications"
+  },
+  {
+    "id": "notif-15",
+    "title": "Welcome to GQT Portal!",
+    "message": "Your student registration under Visvesvaraya Technological University is verified.",
+    "timestamp": "1 month ago",
+    "type": "system",
+    "read": true,
+    "link": "/dashboard"
+  }
+]

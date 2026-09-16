@@ -1,0 +1,122 @@
+[
+  {
+    "id": "cat-1",
+    "name": "AI Internship",
+    "slug": "ai-internship",
+    "count": 24,
+    "icon": "Brain",
+    "description": "Deep Learning, LLMs, Neural Networks, Computer Vision, and NLP applications.",
+    "accentColor": "#0B5ED7",
+    "bgGradient": "from-blue-600 to-indigo-700"
+  },
+  {
+    "id": "cat-2",
+    "name": "Java Full Stack",
+    "slug": "java-full-stack",
+    "count": 32,
+    "icon": "Code2",
+    "description": "Spring Boot, Microservices, Hibernate, REST APIs, and React/Angular frontends.",
+    "accentColor": "#DC2626",
+    "bgGradient": "from-red-600 to-amber-700"
+  },
+  {
+    "id": "cat-3",
+    "name": "Python Full Stack",
+    "slug": "python-full-stack",
+    "count": 28,
+    "icon": "Terminal",
+    "description": "Django, FastAPI, Flask, PostgreSQL, Celery, and Next.js integrations.",
+    "accentColor": "#16A34A",
+    "bgGradient": "from-emerald-600 to-teal-700"
+  },
+  {
+    "id": "cat-4",
+    "name": "MERN Stack",
+    "slug": "mern-stack",
+    "count": 30,
+    "icon": "Layers",
+    "description": "MongoDB, Express.js, React 19, Node.js, and serverless architectures.",
+    "accentColor": "#0284C7",
+    "bgGradient": "from-cyan-600 to-blue-700"
+  },
+  {
+    "id": "cat-5",
+    "name": "Data Science",
+    "slug": "data-science",
+    "count": 18,
+    "icon": "BarChart3",
+    "description": "Pandas, NumPy, Predictive Modeling, PowerBI, Tableau, and Big Data.",
+    "accentColor": "#8B5CF6",
+    "bgGradient": "from-purple-600 to-indigo-800"
+  },
+  {
+    "id": "cat-6",
+    "name": "Cyber Security",
+    "slug": "cyber-security",
+    "count": 14,
+    "icon": "ShieldCheck",
+    "description": "Ethical Hacking, SOC, Penetration Testing, SIEM, and Network Security.",
+    "accentColor": "#E11D48",
+    "bgGradient": "from-rose-600 to-pink-700"
+  },
+  {
+    "id": "cat-7",
+    "name": "Cloud Computing",
+    "slug": "cloud-computing",
+    "count": 20,
+    "icon": "Cloud",
+    "description": "AWS, Azure, Google Cloud Platform, Terraform, and Serverless architectures.",
+    "accentColor": "#0284C7",
+    "bgGradient": "from-sky-600 to-blue-800"
+  },
+  {
+    "id": "cat-8",
+    "name": "UI UX",
+    "slug": "ui-ux",
+    "count": 16,
+    "icon": "Palette",
+    "description": "Figma design systems, wireframing, heuristic evaluation, and interaction design.",
+    "accentColor": "#F59E0B",
+    "bgGradient": "from-amber-500 to-orange-600"
+  },
+  {
+    "id": "cat-9",
+    "name": "Digital Marketing",
+    "slug": "digital-marketing",
+    "count": 12,
+    "icon": "Megaphone",
+    "description": "SEO, Performance Marketing, Social Media Analytics, and Growth Funnels.",
+    "accentColor": "#D97706",
+    "bgGradient": "from-yellow-600 to-amber-800"
+  },
+  {
+    "id": "cat-10",
+    "name": "Embedded Systems",
+    "slug": "embedded-systems",
+    "count": 15,
+    "icon": "Cpu",
+    "description": "ARM Cortex, STM32, RTOS, IoT protocols, Arduino, and Automotive firmware.",
+    "accentColor": "#059669",
+    "bgGradient": "from-teal-600 to-green-700"
+  },
+  {
+    "id": "cat-11",
+    "name": "DevOps",
+    "slug": "devops",
+    "count": 19,
+    "icon": "GitMerge",
+    "description": "Docker, Kubernetes, GitHub Actions, CI/CD, Ansible, and Observability.",
+    "accentColor": "#4F46E5",
+    "bgGradient": "from-indigo-600 to-violet-800"
+  },
+  {
+    "id": "cat-12",
+    "name": "Testing",
+    "slug": "testing",
+    "count": 17,
+    "icon": "CheckCircle2",
+    "description": "Automation testing with Selenium, Playwright, Cypress, TestNG, and JMeter.",
+    "accentColor": "#2563EB",
+    "bgGradient": "from-blue-500 to-cyan-700"
+  }
+]

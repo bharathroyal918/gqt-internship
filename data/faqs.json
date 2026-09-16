@@ -1,0 +1,302 @@
+[
+  {
+    "id": "faq-1",
+    "question": "Is the internship provided on the GQT Portal valid for VTU curriculum credits?",
+    "answer": "Yes, all internships listed on the Global Quest Technologies portal comply strictly with the Visvesvaraya Technological University (VTU) mandatory 8th semester / 6th semester internship guidelines and AICTE internship norms.",
+    "category": "VTU Guidelines"
+  },
+  {
+    "id": "faq-2",
+    "question": "How do I download the No Objection Certificate (NOC) for college submission?",
+    "answer": "Once you receive an offer letter on the portal, navigate to your Student Dashboard > My Applications > View Offer to download your pre-filled university NOC form signed by the hiring company.",
+    "category": "Application Process"
+  },
+  {
+    "id": "faq-3",
+    "question": "Are all internships listed on this portal paid with stipends?",
+    "answer": "Over 85% of corporate internships offer competitive stipends ranging from ₹10,000 to ₹45,000 per month. Academic research and CSR foundation cohorts are clearly marked with their respective stipend and allowance details.",
+    "category": "Stipend & Offers"
+  },
+  {
+    "id": "faq-4",
+    "question": "How does digital certificate verification work?",
+    "answer": "Every certificate issued through GQT contains a tamper-proof QR code and cryptographic verification ID. Anyone, including college placement officers and future employers, can verify credentials at verify.gqtech.in.",
+    "category": "Certificates"
+  },
+  {
+    "id": "faq-5",
+    "question": "Can pre-final year students (6th semester) apply for summer internships?",
+    "answer": "Yes! There are dedicated 2-month and 3-month summer internship openings specifically curated for 6th-semester students to fulfill their academic requirements before final year.",
+    "category": "Application Process"
+  },
+  {
+    "id": "faq-6",
+    "question": "Can I apply for multiple internships simultaneously?",
+    "answer": "Yes, students can apply to up to 10 active internships at any given time. Once an offer is accepted, other in-progress applications are automatically placed on hold.",
+    "category": "Application Process"
+  },
+  {
+    "id": "faq-7",
+    "question": "What should I do if my college guide requires a signed evaluation rubrics sheet?",
+    "answer": "You can download the official VTU rubric evaluation sheet directly from the Circulars section on the home page or from your student dashboard certificates tab.",
+    "category": "VTU Guidelines"
+  },
+  {
+    "id": "faq-8",
+    "question": "How are interviews conducted on the platform?",
+    "answer": "Shortlisted candidates receive interview slots directly on their student dashboard with Google Meet or MS Teams links, calendar invites, and automated SMS reminders.",
+    "category": "Application Process"
+  },
+  {
+    "id": "faq-9",
+    "question": "What if a company requests physical presence for a remote internship?",
+    "answer": "All internships are bound by the declared mode (Remote, Hybrid, or On-site). Any unauthorized change in terms can be reported directly to the GQT Grievance Cell via the Contact page.",
+    "category": "General"
+  },
+  {
+    "id": "faq-10",
+    "question": "Are students from non-VTU universities eligible to apply?",
+    "answer": "Yes, students from autonomous universities, private colleges, and NITs/IIITs in Karnataka and surrounding regions are welcome to register and apply.",
+    "category": "General"
+  },
+  {
+    "id": "faq-11",
+    "question": "Is the internship provided on the GQT Portal valid for VTU curriculum credits? [Policy Section 2]",
+    "answer": "Yes, all internships listed on the Global Quest Technologies portal comply strictly with the Visvesvaraya Technological University (VTU) mandatory 8th semester / 6th semester internship guidelines and AICTE internship norms.",
+    "category": "VTU Guidelines"
+  },
+  {
+    "id": "faq-12",
+    "question": "How do I download the No Objection Certificate (NOC) for college submission? [Policy Section 2]",
+    "answer": "Once you receive an offer letter on the portal, navigate to your Student Dashboard > My Applications > View Offer to download your pre-filled university NOC form signed by the hiring company.",
+    "category": "Application Process"
+  },
+  {
+    "id": "faq-13",
+    "question": "Are all internships listed on this portal paid with stipends? [Policy Section 2]",
+    "answer": "Over 85% of corporate internships offer competitive stipends ranging from ₹10,000 to ₹45,000 per month. Academic research and CSR foundation cohorts are clearly marked with their respective stipend and allowance details.",
+    "category": "Stipend & Offers"
+  },
+  {
+    "id": "faq-14",
+    "question": "How does digital certificate verification work? [Policy Section 2]",
+    "answer": "Every certificate issued through GQT contains a tamper-proof QR code and cryptographic verification ID. Anyone, including college placement officers and future employers, can verify credentials at verify.gqtech.in.",
+    "category": "Certificates"
+  },
+  {
+    "id": "faq-15",
+    "question": "Can pre-final year students (6th semester) apply for summer internships? [Policy Section 3]",
+    "answer": "Yes! There are dedicated 2-month and 3-month summer internship openings specifically curated for 6th-semester students to fulfill their academic requirements before final year.",
+    "category": "Application Process"
+  },
+  {
+    "id": "faq-16",
+    "question": "Can I apply for multiple internships simultaneously? [Policy Section 3]",
+    "answer": "Yes, students can apply to up to 10 active internships at any given time. Once an offer is accepted, other in-progress applications are automatically placed on hold.",
+    "category": "Application Process"
+  },
+  {
+    "id": "faq-17",
+    "question": "What should I do if my college guide requires a signed evaluation rubrics sheet? [Policy Section 3]",
+    "answer": "You can download the official VTU rubric evaluation sheet directly from the Circulars section on the home page or from your student dashboard certificates tab.",
+    "category": "VTU Guidelines"
+  },
+  {
+    "id": "faq-18",
+    "question": "How are interviews conducted on the platform? [Policy Section 3]",
+    "answer": "Shortlisted candidates receive interview slots directly on their student dashboard with Google Meet or MS Teams links, calendar invites, and automated SMS reminders.",
+    "category": "Application Process"
+  },
+  {
+    "id": "faq-19",
+    "question": "What if a company requests physical presence for a remote internship? [Policy Section 3]",
+    "answer": "All internships are bound by the declared mode (Remote, Hybrid, or On-site). Any unauthorized change in terms can be reported directly to the GQT Grievance Cell via the Contact page.",
+    "category": "General"
+  },
+  {
+    "id": "faq-20",
+    "question": "Are students from non-VTU universities eligible to apply? [Policy Section 4]",
+    "answer": "Yes, students from autonomous universities, private colleges, and NITs/IIITs in Karnataka and surrounding regions are welcome to register and apply.",
+    "category": "General"
+  },
+  {
+    "id": "faq-21",
+    "question": "Is the internship provided on the GQT Portal valid for VTU curriculum credits? [Policy Section 4]",
+    "answer": "Yes, all internships listed on the Global Quest Technologies portal comply strictly with the Visvesvaraya Technological University (VTU) mandatory 8th semester / 6th semester internship guidelines and AICTE internship norms.",
+    "category": "VTU Guidelines"
+  },
+  {
+    "id": "faq-22",
+    "question": "How do I download the No Objection Certificate (NOC) for college submission? [Policy Section 4]",
+    "answer": "Once you receive an offer letter on the portal, navigate to your Student Dashboard > My Applications > View Offer to download your pre-filled university NOC form signed by the hiring company.",
+    "category": "Application Process"
+  },
+  {
+    "id": "faq-23",
+    "question": "Are all internships listed on this portal paid with stipends? [Policy Section 4]",
+    "answer": "Over 85% of corporate internships offer competitive stipends ranging from ₹10,000 to ₹45,000 per month. Academic research and CSR foundation cohorts are clearly marked with their respective stipend and allowance details.",
+    "category": "Stipend & Offers"
+  },
+  {
+    "id": "faq-24",
+    "question": "How does digital certificate verification work? [Policy Section 4]",
+    "answer": "Every certificate issued through GQT contains a tamper-proof QR code and cryptographic verification ID. Anyone, including college placement officers and future employers, can verify credentials at verify.gqtech.in.",
+    "category": "Certificates"
+  },
+  {
+    "id": "faq-25",
+    "question": "Can pre-final year students (6th semester) apply for summer internships? [Policy Section 5]",
+    "answer": "Yes! There are dedicated 2-month and 3-month summer internship openings specifically curated for 6th-semester students to fulfill their academic requirements before final year.",
+    "category": "Application Process"
+  },
+  {
+    "id": "faq-26",
+    "question": "Can I apply for multiple internships simultaneously? [Policy Section 5]",
+    "answer": "Yes, students can apply to up to 10 active internships at any given time. Once an offer is accepted, other in-progress applications are automatically placed on hold.",
+    "category": "Application Process"
+  },
+  {
+    "id": "faq-27",
+    "question": "What should I do if my college guide requires a signed evaluation rubrics sheet? [Policy Section 5]",
+    "answer": "You can download the official VTU rubric evaluation sheet directly from the Circulars section on the home page or from your student dashboard certificates tab.",
+    "category": "VTU Guidelines"
+  },
+  {
+    "id": "faq-28",
+    "question": "How are interviews conducted on the platform? [Policy Section 5]",
+    "answer": "Shortlisted candidates receive interview slots directly on their student dashboard with Google Meet or MS Teams links, calendar invites, and automated SMS reminders.",
+    "category": "Application Process"
+  },
+  {
+    "id": "faq-29",
+    "question": "What if a company requests physical presence for a remote internship? [Policy Section 5]",
+    "answer": "All internships are bound by the declared mode (Remote, Hybrid, or On-site). Any unauthorized change in terms can be reported directly to the GQT Grievance Cell via the Contact page.",
+    "category": "General"
+  },
+  {
+    "id": "faq-30",
+    "question": "Are students from non-VTU universities eligible to apply? [Policy Section 6]",
+    "answer": "Yes, students from autonomous universities, private colleges, and NITs/IIITs in Karnataka and surrounding regions are welcome to register and apply.",
+    "category": "General"
+  },
+  {
+    "id": "faq-31",
+    "question": "Is the internship provided on the GQT Portal valid for VTU curriculum credits? [Policy Section 6]",
+    "answer": "Yes, all internships listed on the Global Quest Technologies portal comply strictly with the Visvesvaraya Technological University (VTU) mandatory 8th semester / 6th semester internship guidelines and AICTE internship norms.",
+    "category": "VTU Guidelines"
+  },
+  {
+    "id": "faq-32",
+    "question": "How do I download the No Objection Certificate (NOC) for college submission? [Policy Section 6]",
+    "answer": "Once you receive an offer letter on the portal, navigate to your Student Dashboard > My Applications > View Offer to download your pre-filled university NOC form signed by the hiring company.",
+    "category": "Application Process"
+  },
+  {
+    "id": "faq-33",
+    "question": "Are all internships listed on this portal paid with stipends? [Policy Section 6]",
+    "answer": "Over 85% of corporate internships offer competitive stipends ranging from ₹10,000 to ₹45,000 per month. Academic research and CSR foundation cohorts are clearly marked with their respective stipend and allowance details.",
+    "category": "Stipend & Offers"
+  },
+  {
+    "id": "faq-34",
+    "question": "How does digital certificate verification work? [Policy Section 6]",
+    "answer": "Every certificate issued through GQT contains a tamper-proof QR code and cryptographic verification ID. Anyone, including college placement officers and future employers, can verify credentials at verify.gqtech.in.",
+    "category": "Certificates"
+  },
+  {
+    "id": "faq-35",
+    "question": "Can pre-final year students (6th semester) apply for summer internships? [Policy Section 7]",
+    "answer": "Yes! There are dedicated 2-month and 3-month summer internship openings specifically curated for 6th-semester students to fulfill their academic requirements before final year.",
+    "category": "Application Process"
+  },
+  {
+    "id": "faq-36",
+    "question": "Can I apply for multiple internships simultaneously? [Policy Section 7]",
+    "answer": "Yes, students can apply to up to 10 active internships at any given time. Once an offer is accepted, other in-progress applications are automatically placed on hold.",
+    "category": "Application Process"
+  },
+  {
+    "id": "faq-37",
+    "question": "What should I do if my college guide requires a signed evaluation rubrics sheet? [Policy Section 7]",
+    "answer": "You can download the official VTU rubric evaluation sheet directly from the Circulars section on the home page or from your student dashboard certificates tab.",
+    "category": "VTU Guidelines"
+  },
+  {
+    "id": "faq-38",
+    "question": "How are interviews conducted on the platform? [Policy Section 7]",
+    "answer": "Shortlisted candidates receive interview slots directly on their student dashboard with Google Meet or MS Teams links, calendar invites, and automated SMS reminders.",
+    "category": "Application Process"
+  },
+  {
+    "id": "faq-39",
+    "question": "What if a company requests physical presence for a remote internship? [Policy Section 7]",
+    "answer": "All internships are bound by the declared mode (Remote, Hybrid, or On-site). Any unauthorized change in terms can be reported directly to the GQT Grievance Cell via the Contact page.",
+    "category": "General"
+  },
+  {
+    "id": "faq-40",
+    "question": "Are students from non-VTU universities eligible to apply? [Policy Section 8]",
+    "answer": "Yes, students from autonomous universities, private colleges, and NITs/IIITs in Karnataka and surrounding regions are welcome to register and apply.",
+    "category": "General"
+  },
+  {
+    "id": "faq-41",
+    "question": "Is the internship provided on the GQT Portal valid for VTU curriculum credits? [Policy Section 8]",
+    "answer": "Yes, all internships listed on the Global Quest Technologies portal comply strictly with the Visvesvaraya Technological University (VTU) mandatory 8th semester / 6th semester internship guidelines and AICTE internship norms.",
+    "category": "VTU Guidelines"
+  },
+  {
+    "id": "faq-42",
+    "question": "How do I download the No Objection Certificate (NOC) for college submission? [Policy Section 8]",
+    "answer": "Once you receive an offer letter on the portal, navigate to your Student Dashboard > My Applications > View Offer to download your pre-filled university NOC form signed by the hiring company.",
+    "category": "Application Process"
+  },
+  {
+    "id": "faq-43",
+    "question": "Are all internships listed on this portal paid with stipends? [Policy Section 8]",
+    "answer": "Over 85% of corporate internships offer competitive stipends ranging from ₹10,000 to ₹45,000 per month. Academic research and CSR foundation cohorts are clearly marked with their respective stipend and allowance details.",
+    "category": "Stipend & Offers"
+  },
+  {
+    "id": "faq-44",
+    "question": "How does digital certificate verification work? [Policy Section 8]",
+    "answer": "Every certificate issued through GQT contains a tamper-proof QR code and cryptographic verification ID. Anyone, including college placement officers and future employers, can verify credentials at verify.gqtech.in.",
+    "category": "Certificates"
+  },
+  {
+    "id": "faq-45",
+    "question": "Can pre-final year students (6th semester) apply for summer internships? [Policy Section 9]",
+    "answer": "Yes! There are dedicated 2-month and 3-month summer internship openings specifically curated for 6th-semester students to fulfill their academic requirements before final year.",
+    "category": "Application Process"
+  },
+  {
+    "id": "faq-46",
+    "question": "Can I apply for multiple internships simultaneously? [Policy Section 9]",
+    "answer": "Yes, students can apply to up to 10 active internships at any given time. Once an offer is accepted, other in-progress applications are automatically placed on hold.",
+    "category": "Application Process"
+  },
+  {
+    "id": "faq-47",
+    "question": "What should I do if my college guide requires a signed evaluation rubrics sheet? [Policy Section 9]",
+    "answer": "You can download the official VTU rubric evaluation sheet directly from the Circulars section on the home page or from your student dashboard certificates tab.",
+    "category": "VTU Guidelines"
+  },
+  {
+    "id": "faq-48",
+    "question": "How are interviews conducted on the platform? [Policy Section 9]",
+    "answer": "Shortlisted candidates receive interview slots directly on their student dashboard with Google Meet or MS Teams links, calendar invites, and automated SMS reminders.",
+    "category": "Application Process"
+  },
+  {
+    "id": "faq-49",
+    "question": "What if a company requests physical presence for a remote internship? [Policy Section 9]",
+    "answer": "All internships are bound by the declared mode (Remote, Hybrid, or On-site). Any unauthorized change in terms can be reported directly to the GQT Grievance Cell via the Contact page.",
+    "category": "General"
+  },
+  {
+    "id": "faq-50",
+    "question": "Are students from non-VTU universities eligible to apply? [Policy Section 10]",
+    "answer": "Yes, students from autonomous universities, private colleges, and NITs/IIITs in Karnataka and surrounding regions are welcome to register and apply.",
+    "category": "General"
+  }
+]
