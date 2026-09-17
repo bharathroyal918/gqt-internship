@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@/styles/globals.css";
-import { Toaster } from "sonner";
+import ToasterProvider from "@/components/common/ToasterProvider";
+
 export const metadata: Metadata = {
   title: "GQT Internship | Industry Immersion & Career Platform",
   description:
@@ -19,17 +20,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body className="min-h-screen bg-brand-slate text-brand-text antialiased selection:bg-brand-blue selection:text-white">
         {children}
-        <Toaster
-          position="top-right"
-          richColors
-          closeButton
-          toastOptions={{
-            style: {
-              borderRadius: "14px",
-              fontFamily: "var(--font-inter)",
-            },
-          }}
-        />
+        <ToasterProvider />
       </body>
     </html>
   );
