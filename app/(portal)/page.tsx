@@ -4,7 +4,7 @@ import CircularBoard from "@/components/portal/home/CircularBoard";
 import PartnerLogos from "@/components/portal/home/PartnerLogos";
 import CategoryGrid from "@/components/portal/home/CategoryGrid";
 import FeaturedInternships from "@/components/portal/home/FeaturedInternships";
-import VtuInternshipTable from "@/components/portal/home/VtuInternshipTable";
+import InternshipTable from "@/components/portal/home/VtuInternshipTable";
 import NewsletterCard from "@/components/portal/home/NewsletterCard";
 import CompanyShowcase from "@/components/portal/home/CompanyShowcase";
 import StatsCounter from "@/components/portal/home/StatsCounter";
@@ -30,7 +30,7 @@ export default function HomePage() {
       <FeaturedInternships />
 
       {/* Section 9: VTU-Style Internship Listing Table */}
-      <VtuInternshipTable />
+      <InternshipTable />
 
       {/* Section 10: Internship Alerts Subscription */}
       <NewsletterCard />

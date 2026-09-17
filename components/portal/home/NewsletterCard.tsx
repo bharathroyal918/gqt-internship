@@ -38,7 +38,7 @@ export default function NewsletterCard() {
             </h2>
 
             <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-              Receive curated notifications matching your degree branch, college location, and target tech stack. 100% free for VTU engineering students.
+              Receive curated notifications matching your degree branch, college location, and target tech stack. 100% free for engineering & tech students across India.
             </p>
 
             {subscribed ? (

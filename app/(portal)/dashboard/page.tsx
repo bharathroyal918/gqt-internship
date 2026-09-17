@@ -100,13 +100,13 @@ export default function StudentDashboardHome() {
         <div className="space-y-2 max-w-xl z-10">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-amber-300 text-xs font-bold uppercase tracking-wider">
             <Sparkles className="h-3.5 w-3.5" />
-            <span>VTU Academic Session 2026</span>
+            <span>Academic Session 2027</span>
           </div>
           <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
-            Welcome Back, Rohan Patil!
+            Welcome Back, Bharath Royal!
           </h1>
           <p className="text-xs sm:text-sm text-slate-200 leading-relaxed">
-            You have 1 live interview scheduled tomorrow with Razorpay and 2 pending recruiter updates. All active applications comply with VTU credit scheme norms.
+            You have 1 live interview scheduled tomorrow with Wipro Digital and 2 pending recruiter updates. All active applications comply with VTU credit scheme norms.
           </p>
         </div>
 
@@ -174,15 +174,15 @@ export default function StudentDashboardHome() {
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                 <div>
                   <h3 className="text-base font-bold text-slate-900">
-                    Razorpay Engineering • Technical Round 1
+                    Wipro Digital • Technical Round 1
                   </h3>
                   <p className="text-xs text-slate-600">
-                    Role: MERN Stack & Payment Microservices Intern (Batch 2026)
+                    Role: MERN Stack & Payment Microservices Intern (Batch 2027)
                   </p>
                 </div>
                 <div className="text-left sm:text-right">
                   <span className="text-xs font-bold text-purple-800 font-mono block">
-                    Tomorrow, 11:30 AM IST
+                    24 September, 2027 11:30 AM IST
                   </span>
                   <span className="text-[11px] text-slate-500">Duration: 45 Mins</span>
                 </div>
@@ -191,7 +191,7 @@ export default function StudentDashboardHome() {
               <div className="flex flex-wrap items-center justify-between pt-2 border-t border-purple-200/60 gap-3">
                 <div className="flex items-center gap-2 text-xs text-slate-600">
                   <span className="h-2 w-2 rounded-full bg-emerald-500 animate-ping"></span>
-                  <span>Google Meet ID: <strong>meet.google.com/rzp-gqt-intern</strong></span>
+                  <span>Google Meet ID: <strong>meet.google.com/gqt-wipr-intern</strong></span>
                 </div>
 
                 <Button
@@ -240,12 +240,12 @@ export default function StudentDashboardHome() {
                 Profile Readiness
               </h2>
               <span className="text-xs font-bold text-emerald-700 font-mono">
-                85% Complete
+                90% Complete
               </span>
             </div>
 
             <div className="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden">
-              <div className="bg-emerald-500 h-full rounded-full w-[85%]" />
+              <div className="bg-emerald-500 h-full rounded-full w-[90%]" />
             </div>
 
             <p className="text-xs text-slate-500 leading-relaxed">
@@ -261,7 +261,7 @@ export default function StudentDashboardHome() {
               </div>
               <div className="flex items-center justify-between text-slate-600">
                 <span className="flex items-center gap-1.5 text-emerald-600">
-                  <CheckCircle2 className="h-3.5 w-3.5" /> VTU College USN Linked
+                  <CheckCircle2 className="h-3.5 w-3.5" /> College USN Linked
                 </span>
                 <span className="text-slate-400">Done</span>
               </div>

@@ -49,7 +49,7 @@ export default function ContactPage() {
         <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-brand-blue text-xs font-bold uppercase tracking-wider mb-2">
             <MessageSquare className="h-3.5 w-3.5" />
-            <span>Karnataka Student Helpdesk</span>
+            <span>GQT Student Helpdesk</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
             We’re Here to Help You Navigate Your Internship
@@ -220,16 +220,16 @@ export default function ContactPage() {
             <div className="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-soft space-y-4">
               <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider flex items-center gap-2">
                 <Building2 className="h-4 w-4 text-brand-blue" />
-                <span>Bengaluru Headquarters</span>
+                <span>Bengaluru Incubation</span>
               </h3>
               <div className="space-y-3 text-xs text-slate-600">
                 <p className="flex items-start gap-2 leading-relaxed">
                   <MapPin className="h-4 w-4 text-brand-blue flex-shrink-0 mt-0.5" />
-                  <span>#42, Global Quest Tower, Sector 3, HSR Layout, Bengaluru, Karnataka - 560102</span>
+                  <span>#324,2nd Floor,3 A Cross, Near Seshadripuram First Grade College, Above City Union Bank, Yelahanka New Town, Bengaluru-560064.</span>
                 </p>
                 <p className="flex items-center gap-2">
                   <Phone className="h-4 w-4 text-emerald-600 flex-shrink-0" />
-                  <span>+91 080 4920 7800</span>
+                  <span>+91 94484 03469</span>
                 </p>
                 <p className="flex items-center gap-2">
                   <Mail className="h-4 w-4 text-amber-500 flex-shrink-0" />
@@ -243,7 +243,7 @@ export default function ContactPage() {
             </div>
 
             {/* Regional Centers Card */}
-            <div className="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-soft space-y-4">
+            {/* <div className="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-soft space-y-4">
               <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider">
                 Regional Hubs
               </h3>
@@ -257,7 +257,7 @@ export default function ContactPage() {
                   <p className="text-slate-500">KLE Tech University Incubation Center, Vidyanagar, Hubballi - 580031</p>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* Interactive Map Placeholder */}
             <div className="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-soft space-y-3">
@@ -267,13 +267,13 @@ export default function ContactPage() {
               <div className="h-44 rounded-2xl bg-slate-100 border border-slate-200 relative overflow-hidden flex flex-col items-center justify-center text-center p-4">
                 <MapPin className="h-8 w-8 text-rose-500 animate-bounce mb-2" />
                 <span className="font-bold text-xs text-slate-800">
-                  Global Quest Technologies Tower
+                  Global Quest Technologies
                 </span>
                 <span className="text-[11px] text-slate-500">
-                  HSR Layout, Bengaluru (Near Silk Board)
+                  #324,2nd Floor,3 A Cross, Near Seshadripuram First Grade College, Above City Union Bank, Yelahanka New Town, Bengaluru-560064.
                 </span>
                 <a
-                  href="https://maps.google.com"
+                  href="https://maps.app.goo.gl/1obypAQeXDiaW3eA7"
                   target="_blank"
                   rel="noreferrer"
                   className="mt-2 text-xs font-semibold text-brand-blue hover:underline"

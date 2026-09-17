@@ -6,6 +6,7 @@ import companiesData from "@/data/companies.json";
 import { Company } from "@/types";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
+import CompanyLogo from "@/components/common/CompanyLogo";
 import {
   Building2,
   MapPin,
@@ -55,8 +56,8 @@ export default function CompanyShowcase() {
               <div>
                 {/* Logo & Tier */}
                 <div className="flex items-start justify-between gap-3 mb-4">
-                  <div className="h-14 w-14 rounded-2xl bg-blue-50 border border-slate-200/80 overflow-hidden flex items-center justify-center font-extrabold text-brand-blue text-base group-hover:scale-105 transition-transform">
-                    {comp.name.slice(0, 2).toUpperCase()}
+                  <div className="p-1 rounded-2xl bg-white border border-slate-200/80 shadow-xs group-hover:scale-105 transition-transform flex-shrink-0">
+                    <CompanyLogo name={comp.name} logoUrl={comp.logo} size="lg" />
                   </div>
                   <Badge variant={comp.tier === "Enterprise" ? "navy" : "gold"}>
                     {comp.tier}

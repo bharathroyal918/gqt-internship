@@ -7,6 +7,7 @@ import { Internship } from "@/types";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import ApplyModal from "@/components/common/ApplyModal";
+import CompanyLogo from "@/components/common/CompanyLogo";
 import {
   Building2,
   MapPin,
@@ -66,7 +67,7 @@ export default function FeaturedInternships() {
               Featured Corporate Internships
             </h2>
             <p className="text-sm sm:text-base text-slate-500 mt-1">
-              Top rated by students and guaranteed curriculum compliant by VTU guidelines.
+              Top rated by students with hands-on projects, industry mentorship, and verified certificates.
             </p>
           </div>
 
@@ -92,11 +93,15 @@ export default function FeaturedInternships() {
                   {/* Top Bar: Company logo + Save & Share */}
                   <div className="flex items-start justify-between gap-3 mb-4">
                     <div className="flex items-center gap-3">
-                      <div className="h-12 w-12 rounded-2xl bg-blue-50 border border-slate-200/80 overflow-hidden flex items-center justify-center font-bold text-brand-blue text-sm">
-                        {internship.company.slice(0, 2).toUpperCase()}
+                      <div className="p-1 rounded-2xl bg-white border border-slate-200/80 shadow-xs flex-shrink-0">
+                        <CompanyLogo
+                          name={internship.company}
+                          logoUrl={internship.companyLogo}
+                          size="md"
+                        />
                       </div>
                       <div>
-                        <h4 className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+                        <h4 className="text-xs font-bold text-slate-700 uppercase tracking-wider">
                           {internship.company}
                         </h4>
                         <div className="flex items-center gap-1.5 mt-0.5">

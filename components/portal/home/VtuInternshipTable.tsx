@@ -9,6 +9,7 @@ import { Badge } from "@/components/ui/Badge";
 import { Pagination } from "@/components/ui/Pagination";
 import { EmptyState } from "@/components/ui/EmptyState";
 import ApplyModal from "@/components/common/ApplyModal";
+import CompanyLogo from "@/components/common/CompanyLogo";
 import {
   Search,
   Filter,
@@ -110,13 +111,13 @@ export default function VtuInternshipTable() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-brand-blue text-xs font-bold uppercase tracking-wider mb-2">
-            <span>VTU Style Directory Listing</span>
+            <span>Pan-India Corporate Directory</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             Comprehensive Internship Listing Table
           </h2>
           <p className="text-sm sm:text-base text-slate-500 mt-2">
-            Filter, compare, and apply to all 100 verified industry openings across Karnataka.
+            Filter, compare, and apply to 100+ verified industry openings across India and remote.
           </p>
         </div>
 
@@ -260,8 +261,8 @@ export default function VtuInternshipTable() {
                       {/* Company & Role */}
                       <td className="py-4 px-4">
                         <div className="flex items-center gap-3">
-                          <div className="h-9 w-9 rounded-xl bg-blue-50 border border-slate-200/80 flex items-center justify-center font-bold text-brand-blue text-xs flex-shrink-0">
-                            {item.company.slice(0, 2).toUpperCase()}
+                          <div className="p-0.5 rounded-xl bg-white border border-slate-200/80 shadow-xs flex-shrink-0">
+                            <CompanyLogo name={item.company} size="sm" />
                           </div>
                           <div>
                             <Link
@@ -343,16 +344,21 @@ export default function VtuInternshipTable() {
               {paginatedItems.map((item) => (
                 <div key={item.id} className="pt-4 first:pt-0 space-y-3">
                   <div className="flex items-start justify-between">
-                    <div>
-                      <span className="text-[10px] text-slate-400 font-bold uppercase">
-                        {item.company}
-                      </span>
-                      <Link
-                        href={`/internships/${item.id}`}
-                        className="text-sm font-bold text-slate-900 block"
-                      >
-                        {item.title}
-                      </Link>
+                    <div className="flex items-center gap-2.5">
+                      <div className="p-0.5 rounded-xl bg-white border border-slate-200/80 shadow-xs flex-shrink-0">
+                        <CompanyLogo name={item.company} size="sm" />
+                      </div>
+                      <div>
+                        <span className="text-[10px] text-slate-400 font-bold uppercase">
+                          {item.company}
+                        </span>
+                        <Link
+                          href={`/internships/${item.id}`}
+                          className="text-sm font-bold text-slate-900 block"
+                        >
+                          {item.title}
+                        </Link>
+                      </div>
                     </div>
                     <Badge variant="navy" className="text-[10px]">
                       {item.mode}

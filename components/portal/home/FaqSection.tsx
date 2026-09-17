@@ -14,7 +14,7 @@ export default function FaqSection() {
     "All",
     "General",
     "Application Process",
-    "VTU Guidelines",
+    "Academic & Credits",
     "Certificates",
     "Stipend & Offers",
   ];
@@ -41,7 +41,7 @@ export default function FaqSection() {
             Frequently Asked Questions
           </h2>
           <p className="text-sm sm:text-base text-slate-500 mt-2">
-            Everything you need to know about VTU credit validation, stipends, and application steps.
+            Everything you need to know about academic credit validation, stipends, and application steps.
           </p>
 
           {/* Quick Search */}

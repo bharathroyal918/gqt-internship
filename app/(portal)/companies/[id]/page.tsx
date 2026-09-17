@@ -9,6 +9,7 @@ import { Company, Internship } from "@/types";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import ApplyModal from "@/components/common/ApplyModal";
+import CompanyLogo from "@/components/common/CompanyLogo";
 import {
   Building2,
   MapPin,
@@ -59,9 +60,12 @@ export default function CompanyDetailPage({
         <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-soft mb-8">
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
             <div className="flex items-start gap-4">
-              <div className="h-20 w-20 rounded-2xl bg-blue-50 border border-slate-200 flex items-center justify-center font-extrabold text-brand-blue text-2xl flex-shrink-0">
-                {company.name.slice(0, 2).toUpperCase()}
-              </div>
+              <CompanyLogo
+                name={company.name}
+                logoUrl={company.logo}
+                size="xl"
+                className="h-20 w-20 rounded-2xl p-2.5 shadow-sm border border-slate-200/80"
+              />
               <div className="space-y-1.5">
                 <div className="flex items-center gap-2">
                   <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
@@ -133,7 +137,7 @@ export default function CompanyDetailPage({
               <span>Open Internships at {company.name} ({hiringInternships.length})</span>
             </h2>
             <span className="text-xs text-slate-500">
-              VTU Accredited Cohorts
+              GQT Accredited Cohorts
             </span>
           </div>
 

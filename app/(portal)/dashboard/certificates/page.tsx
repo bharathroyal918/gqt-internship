@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { Modal } from "@/components/ui/Modal";
@@ -35,15 +36,15 @@ const certificates: CertificateItem[] = [
   {
     id: "CERT-VTU-2026-0819",
     title: "Certificate of Industrial Internship Completion",
-    recipient: "Rohan M. Patil",
-    usn: "1RV22CS089",
-    college: "RV College of Engineering, Bengaluru",
-    company: "Global Quest Labs & Wipro Digital",
-    domain: "Full Stack Java Cloud & Microservices",
+    recipient: "Bharath Royal",
+    usn: "23785A3102",
+    college: "RVS university",
+    company: "Global Quest Labs",
+    domain: "AI & ML",
     duration: "4 Months (600 Hours)",
-    issueDate: "28 August 2026",
+    issueDate: "17 September 2026",
     verificationHash: "0x8F9C3E14B72A99D8F3E1",
-    grade: "Grade: Excellent (O)",
+    grade: "Grade: Outstanding (O)",
   },
 ];
 
@@ -162,9 +163,15 @@ export default function CertificatesPage() {
           <div className="p-6 sm:p-10 bg-gradient-to-br from-amber-50/40 via-white to-blue-50/30 rounded-2xl border-4 border-double border-amber-300/80 text-center space-y-6 relative shadow-inner">
             {/* Header Logos */}
             <div className="flex items-center justify-between pb-4 border-b border-slate-200">
-              <div className="flex items-center gap-2">
-                <div className="h-10 w-10 rounded-xl bg-brand-navy text-white flex items-center justify-center font-extrabold text-sm">
-                  GQT
+              <div className="flex items-center gap-2.5">
+                <div className="bg-white p-1 rounded-xl border border-slate-200 shadow-xs flex items-center justify-center">
+                  <Image
+                    src="/images/gqt-logo.jpeg"
+                    alt="Global Quest Technologies"
+                    width={130}
+                    height={46}
+                    className="h-10 w-auto object-contain"
+                  />
                 </div>
                 <div className="text-left text-[11px]">
                   <span className="font-extrabold text-brand-navy block">
