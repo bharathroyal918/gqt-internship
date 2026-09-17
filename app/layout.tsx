@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import "@/styles/globals.css";
 import { Toaster } from "sonner";
-import PortalSwitcherBadge from "@/components/common/PortalSwitcherBadge";
-
 export const metadata: Metadata = {
   title: "GQT Internship | Industry Immersion & Career Platform",
   description:
@@ -21,8 +19,6 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body className="min-h-screen bg-brand-slate text-brand-text antialiased selection:bg-brand-blue selection:text-white">
         {children}
-        {/* Portal Switcher Badge for local dev preview */}
-        <PortalSwitcherBadge />
         <Toaster
           position="top-right"
           richColors
