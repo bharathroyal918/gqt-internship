@@ -11,6 +11,7 @@ import { Badge } from "@/components/ui/Badge";
 import { Pagination } from "@/components/ui/Pagination";
 import { EmptyState } from "@/components/ui/EmptyState";
 import ApplyModal from "@/components/common/ApplyModal";
+import CompanyLogo from "@/components/common/CompanyLogo";
 import {
   Search,
   SlidersHorizontal,
@@ -436,8 +437,8 @@ function InternshipsDirectoryContent() {
                       <div className="p-5">
                         <div className="flex items-start justify-between gap-2 mb-3">
                           <div className="flex items-center gap-2.5">
-                            <div className="h-11 w-11 rounded-xl bg-blue-50 border border-slate-200/80 flex items-center justify-center font-bold text-brand-blue text-xs">
-                              {internship.company.slice(0, 2).toUpperCase()}
+                            <div className="p-0.5 rounded-xl bg-white border border-slate-200/80 shadow-xs flex-shrink-0">
+                              <CompanyLogo name={internship.company} size="sm" />
                             </div>
                             <div>
                               <p className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">
@@ -537,8 +538,12 @@ function InternshipsDirectoryContent() {
                     key={internship.id}
                     className="p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:bg-blue-50/20 transition-colors group"
                   >
-                    <div className="space-y-1.5 flex-1">
-                      <div className="flex items-center gap-2">
+                    <div className="flex items-start gap-3.5 flex-1">
+                      <div className="p-0.5 rounded-xl bg-white border border-slate-200/80 shadow-xs flex-shrink-0 mt-0.5">
+                        <CompanyLogo name={internship.company} size="md" />
+                      </div>
+                      <div className="space-y-1.5 flex-1">
+                        <div className="flex items-center gap-2">
                         <span className="text-xs font-bold text-slate-400 uppercase">
                           {internship.company}
                         </span>
@@ -570,6 +575,7 @@ function InternshipsDirectoryContent() {
                         </span>
                       </div>
                     </div>
+                  </div>
 
                     <div className="flex items-center gap-2 sm:self-center">
                       <Link href={`/internships/${internship.id}`}>

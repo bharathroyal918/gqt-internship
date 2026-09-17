@@ -22,7 +22,7 @@ export default function TestimonialsSection() {
             Hear From Our 2026 Batch Interns
           </h2>
           <p className="text-sm sm:text-base text-slate-500 mt-2">
-            Real stories from VTU engineering students who transformed their technical skills into full-time career offers.
+            Real stories from engineering students who transformed their technical skills into full-time career offers.
           </p>
         </div>
 
@@ -135,7 +135,7 @@ export default function TestimonialsSection() {
                   &ldquo;How GQT Helped Me Clear Tech Interviews at {activeVideo.company}&rdquo;
                 </h4>
                 <p className="text-xs text-slate-300 max-w-md mx-auto">
-                  Recorded live during the 2026 VTU Placement Conclave in Bengaluru.
+                  Recorded live during the 2026 National Placement Conclave.
                 </p>
               </div>
             </div>

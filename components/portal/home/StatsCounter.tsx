@@ -17,14 +17,14 @@ const stats: StatItem[] = [
     count: 45000,
     suffix: "+",
     icon: Users,
-    desc: "Across 30 districts in Karnataka",
+    desc: "From top engineering colleges nationwide",
   },
   {
     label: "Accredited Internships Posted",
     count: 1200,
     suffix: "+",
     icon: Briefcase,
-    desc: "100% compliant with VTU credit scheme",
+    desc: "100% compliant with university credit schemes",
   },
   {
     label: "Corporate Hiring Partners",
@@ -38,7 +38,7 @@ const stats: StatItem[] = [
     count: 120,
     suffix: "+",
     icon: GraduationCap,
-    desc: "Autonomous & VTU partner institutes",
+    desc: "Partner universities & institutes nationwide",
   },
   {
     label: "Pre-Placement Offers (PPO)",

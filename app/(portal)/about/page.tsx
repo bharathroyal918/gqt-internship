@@ -54,29 +54,29 @@ const milestones = [
 
 const leadership = [
   {
-    name: "Dr. Arvind K. Swamy",
-    role: "Managing Director & CEO",
-    bio: "Ex-Director at Infosys Labs, IIT Madras alumnus with 25+ years shaping high-growth engineering organizations.",
+    name: "Dr. Neelakantapuram Raghuveera Reddy",
+    role: "Social Activist and Leader",
+    bio: "Dr. Neelakantapuram Raghuveera Reddy Garu is an Indian politician belonging to the Indian National Congress. He was appointed President for bifurcated Andhra Pradesh Congress Committee in March, 2014. Raghuveera Reddy Yadav, is a three times M.L.A. from Madakasira Assembly Constituency.",
     photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
   },
   {
-    name: "Dr. Malathi N. Rao",
-    role: "Chief Academic Officer",
-    bio: "Former Dean of Engineering at VTU with extensive research leadership in curriculum reform and AICTE guidelines.",
-    photo: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80",
-  },
-  {
-    name: "Sandeep V. Murthy",
-    role: "Head of Industry Alliances",
-    bio: "Former Global Campus Recruitment Lead at Cisco, directing university immersion partnerships across India.",
+    name: "Mr. Raksha Ramaiah",
+    role: "Social Activist and Leader",
+    bio: "Mr.Raksha Ramaiah, inspired by his family’s legacy of philanthropy and social service, has dedicated himself to initiatives aimed at uplifting and promoting education.During the challenging times of the Covid-19 pandemic",
     photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80",
   },
-  {
-    name: "Priyanka S. Deshpande",
-    role: "Director of Student Placement & CSR",
-    bio: "Passionate social entrepreneur heading GQT Career Launch across 30 Karnataka districts.",
-    photo: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80",
-  },
+  //   {
+  //     name: "Sandeep V. Murthy",
+  //     role: "Head of Industry Alliances",
+  //     bio: "Former Global Campus Recruitment Lead at Cisco, directing university immersion partnerships across India.",
+  //     photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80",
+  //   },
+  //   {
+  //     name: "Priyanka S. Deshpande",
+  //     role: "Director of Student Placement & CSR",
+  //     bio: "Passionate social entrepreneur heading GQT Career Launch across 30 Karnataka districts.",
+  //     photo: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80",
+  //   },
 ];
 
 export default function AboutPage() {
@@ -221,7 +221,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
             {leadership.map((l, idx) => (
               <div
                 key={idx}

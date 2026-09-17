@@ -4,11 +4,11 @@ import { Toaster } from "sonner";
 import PortalSwitcherBadge from "@/components/common/PortalSwitcherBadge";
 
 export const metadata: Metadata = {
-  title: "Global Quest Technologies | VTU & Industry Internship Portal",
+  title: "GQT Internship | Industry Immersion & Career Platform",
   description:
-    "Official Industry Internship & Campus Placement Platform by Global Quest Technologies in collaboration with VTU and premier engineering colleges in Karnataka.",
+    "Official GQT Internship Platform by Global Quest Technologies offering accredited corporate internships, skill bootcamps, and career immersion.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/images/gqt-logo.jpeg",
   },
 };
 

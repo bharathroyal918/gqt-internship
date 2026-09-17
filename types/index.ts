@@ -162,6 +162,9 @@ export interface InternshipCategory {
   slug: string;
   count: number;
   icon: string;
+  logo?: string;
+  internetSource?: string;
+  popularTech?: string[];
   description: string;
   accentColor: string;
   bgGradient: string;

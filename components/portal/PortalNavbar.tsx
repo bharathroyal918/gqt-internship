@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/Button";
 import {
@@ -13,7 +14,6 @@ import {
   LogIn,
   Menu,
   X,
-  GraduationCap,
   ShieldCheck,
   ChevronRight,
 } from "lucide-react";
@@ -53,22 +53,22 @@ export default function PortalNavbar() {
         <div className="flex items-center justify-between">
           {/* Brand Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="h-11 w-11 rounded-2xl bg-gradient-to-br from-brand-blue to-brand-navy flex items-center justify-center text-white shadow-soft group-hover:scale-105 transition-transform">
-              <GraduationCap className="h-6 w-6 text-amber-400" />
+            <div className="bg-white p-1 rounded-xl shadow-xs border border-slate-100 flex items-center justify-center group-hover:scale-105 transition-transform flex-shrink-0">
+              <Image
+                src="/images/gqt-logo.jpeg"
+                alt="GQT Logo"
+                width={115}
+                height={40}
+                className="h-10 w-auto object-contain"
+                priority
+              />
             </div>
             <div className="flex flex-col">
-              <div className="flex items-center gap-1.5">
-                <span className="font-extrabold text-lg text-brand-navy tracking-tight group-hover:text-brand-blue transition-colors">
-                  GLOBAL QUEST
-                </span>
-                <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-blue-50 text-brand-blue font-bold border border-blue-200">
-                  PORTAL
-                </span>
-              </div>
-              <span className="text-[11px] text-slate-500 tracking-wide font-medium flex items-center gap-1">
-                <span>VTU Internship Network</span>
-                <span className="h-1 w-1 rounded-full bg-amber-400"></span>
-                <span className="text-slate-400">Karnataka</span>
+              <span className="font-extrabold text-lg sm:text-xl text-brand-navy tracking-tight group-hover:text-brand-blue transition-colors leading-tight">
+                GQT <span className="text-brand-blue">Internship</span>
+              </span>
+              <span className="text-[10px] sm:text-[11px] text-slate-500 tracking-wide font-medium">
+                Industry Immersion Platform
               </span>
             </div>
           </Link>

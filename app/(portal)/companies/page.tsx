@@ -7,6 +7,7 @@ import { Company } from "@/types";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { EmptyState } from "@/components/ui/EmptyState";
+import CompanyLogo from "@/components/common/CompanyLogo";
 import {
   Search,
   Building2,
@@ -71,7 +72,7 @@ export default function CompaniesPage() {
             50+ Partner Tech Companies & GCCs
           </h1>
           <p className="text-sm sm:text-base text-slate-500 mt-2">
-            Explore industry leaders hiring VTU engineering students for accredited internship programs.
+            Explore industry leaders hiring engineering students across India for accredited corporate internship programs.
           </p>
         </div>
 
@@ -152,8 +153,8 @@ export default function CompaniesPage() {
               >
                 <div>
                   <div className="flex items-start justify-between gap-3 mb-4">
-                    <div className="h-14 w-14 rounded-2xl bg-blue-50 border border-slate-200 flex items-center justify-center font-extrabold text-brand-blue text-lg group-hover:scale-105 transition-transform">
-                      {comp.name.slice(0, 2).toUpperCase()}
+                    <div className="p-1 rounded-2xl bg-white border border-slate-200/80 shadow-xs group-hover:scale-105 transition-transform flex-shrink-0">
+                      <CompanyLogo name={comp.name} logoUrl={comp.logo} size="lg" />
                     </div>
                     <Badge variant={comp.tier === "Enterprise" ? "navy" : "gold"}>
                       {comp.tier}

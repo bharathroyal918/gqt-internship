@@ -9,7 +9,7 @@ export async function GET() {
       description:
         "Enterprise-grade REST API powering the GQT Student & College Internship Portal (internships.gqtech.in) and GQT Executive Admin Portal (admin.gqtech.in). Features role-based access control, BullMQ background queues, cryptographic certificate verification, and real-time VTU affiliation syncing.",
       contact: {
-        name: "Global Quest Technologies Engineering",
+        name: "Global Quest Technologies",
         email: "support@gqtech.in",
         url: "https://gqtech.in",
       },

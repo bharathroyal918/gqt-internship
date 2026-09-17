@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import {
   LayoutDashboard,
@@ -105,18 +106,28 @@ export default function AdminSidebar({
     >
       {/* Brand Header */}
       <div>
-        <div className="p-5 flex items-center justify-between border-b border-white/10">
-          <Link href="/admin" className="flex items-center gap-3 overflow-hidden">
-            <div className="h-10 w-10 rounded-xl bg-brand-blue text-white flex items-center justify-center font-bold shadow-soft flex-shrink-0">
-              <ShieldCheck className="h-6 w-6 text-amber-400" />
+        <div className="p-4 flex items-center justify-between border-b border-white/10">
+          <Link href="/admin" className="flex items-center gap-2.5 overflow-hidden">
+            <div className="bg-white p-1 rounded-xl shadow-soft flex items-center justify-center flex-shrink-0">
+              <Image
+                src="/images/gqt-logo.jpeg"
+                alt="GQT Admin"
+                width={collapsed ? 36 : 85}
+                height={32}
+                className={cn(
+                  "object-contain",
+                  collapsed ? "h-7 w-7 object-left" : "h-7 w-auto max-w-[85px]"
+                )}
+                priority
+              />
             </div>
             {!collapsed && (
               <div className="flex flex-col truncate">
-                <span className="font-extrabold text-sm text-white tracking-tight">
-                  GQT ADMIN
+                <span className="font-extrabold text-xs text-white tracking-tight leading-tight">
+                  GQT Internship
                 </span>
-                <span className="text-[10px] text-amber-400 font-bold uppercase tracking-wider">
-                  Executive Suite
+                <span className="text-[9px] text-amber-400 font-bold uppercase tracking-wider">
+                  Admin Console
                 </span>
               </div>
             )}

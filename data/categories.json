@@ -7,7 +7,15 @@
     "icon": "Brain",
     "description": "Deep Learning, LLMs, Neural Networks, Computer Vision, and NLP applications.",
     "accentColor": "#0B5ED7",
-    "bgGradient": "from-blue-600 to-indigo-700"
+    "bgGradient": "from-blue-600 to-indigo-700",
+    "logo": "/images/domains/ai.svg",
+    "internetSource": "https://raw.githubusercontent.com/devicons/devicon/master/icons/pytorch/pytorch-original.svg",
+    "popularTech": [
+      "PyTorch",
+      "LLMs",
+      "Neural Networks",
+      "LangChain"
+    ]
   },
   {
     "id": "cat-2",
@@ -17,7 +25,15 @@
     "icon": "Code2",
     "description": "Spring Boot, Microservices, Hibernate, REST APIs, and React/Angular frontends.",
     "accentColor": "#DC2626",
-    "bgGradient": "from-red-600 to-amber-700"
+    "bgGradient": "from-red-600 to-amber-700",
+    "logo": "/images/domains/java.svg",
+    "internetSource": "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
+    "popularTech": [
+      "Java 21",
+      "Spring Boot",
+      "Microservices",
+      "React"
+    ]
   },
   {
     "id": "cat-3",
@@ -27,7 +43,15 @@
     "icon": "Terminal",
     "description": "Django, FastAPI, Flask, PostgreSQL, Celery, and Next.js integrations.",
     "accentColor": "#16A34A",
-    "bgGradient": "from-emerald-600 to-teal-700"
+    "bgGradient": "from-emerald-600 to-teal-700",
+    "logo": "/images/domains/python.svg",
+    "internetSource": "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
+    "popularTech": [
+      "Python",
+      "Django",
+      "FastAPI",
+      "PostgreSQL"
+    ]
   },
   {
     "id": "cat-4",
@@ -37,7 +61,15 @@
     "icon": "Layers",
     "description": "MongoDB, Express.js, React 19, Node.js, and serverless architectures.",
     "accentColor": "#0284C7",
-    "bgGradient": "from-cyan-600 to-blue-700"
+    "bgGradient": "from-cyan-600 to-blue-700",
+    "logo": "/images/domains/react.svg",
+    "internetSource": "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg",
+    "popularTech": [
+      "React 19",
+      "Node.js",
+      "MongoDB",
+      "Express"
+    ]
   },
   {
     "id": "cat-5",
@@ -47,7 +79,15 @@
     "icon": "BarChart3",
     "description": "Pandas, NumPy, Predictive Modeling, PowerBI, Tableau, and Big Data.",
     "accentColor": "#8B5CF6",
-    "bgGradient": "from-purple-600 to-indigo-800"
+    "bgGradient": "from-purple-600 to-indigo-800",
+    "logo": "/images/domains/data-science.svg",
+    "internetSource": "https://raw.githubusercontent.com/devicons/devicon/master/icons/pandas/pandas-original.svg",
+    "popularTech": [
+      "Pandas",
+      "NumPy",
+      "Tableau",
+      "Power BI"
+    ]
   },
   {
     "id": "cat-6",
@@ -57,7 +97,15 @@
     "icon": "ShieldCheck",
     "description": "Ethical Hacking, SOC, Penetration Testing, SIEM, and Network Security.",
     "accentColor": "#E11D48",
-    "bgGradient": "from-rose-600 to-pink-700"
+    "bgGradient": "from-rose-600 to-pink-700",
+    "logo": "/images/domains/cyber-security.svg",
+    "internetSource": "https://raw.githubusercontent.com/devicons/devicon/master/icons/kalilinux/kalilinux-original.svg",
+    "popularTech": [
+      "Kali Linux",
+      "SOC",
+      "Penetration Testing",
+      "SIEM"
+    ]
   },
   {
     "id": "cat-7",
@@ -67,7 +115,15 @@
     "icon": "Cloud",
     "description": "AWS, Azure, Google Cloud Platform, Terraform, and Serverless architectures.",
     "accentColor": "#0284C7",
-    "bgGradient": "from-sky-600 to-blue-800"
+    "bgGradient": "from-sky-600 to-blue-800",
+    "logo": "/images/domains/cloud.svg",
+    "internetSource": "https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+    "popularTech": [
+      "AWS",
+      "Azure Cloud",
+      "Terraform",
+      "Kubernetes"
+    ]
   },
   {
     "id": "cat-8",
@@ -77,7 +133,15 @@
     "icon": "Palette",
     "description": "Figma design systems, wireframing, heuristic evaluation, and interaction design.",
     "accentColor": "#F59E0B",
-    "bgGradient": "from-amber-500 to-orange-600"
+    "bgGradient": "from-amber-500 to-orange-600",
+    "logo": "/images/domains/figma.svg",
+    "internetSource": "https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg",
+    "popularTech": [
+      "Figma",
+      "Design Systems",
+      "Wireframing",
+      "Prototyping"
+    ]
   },
   {
     "id": "cat-9",
@@ -87,7 +151,15 @@
     "icon": "Megaphone",
     "description": "SEO, Performance Marketing, Social Media Analytics, and Growth Funnels.",
     "accentColor": "#D97706",
-    "bgGradient": "from-yellow-600 to-amber-800"
+    "bgGradient": "from-yellow-600 to-amber-800",
+    "logo": "/images/domains/digital-marketing.svg",
+    "internetSource": "https://raw.githubusercontent.com/devicons/devicon/master/icons/google/google-original.svg",
+    "popularTech": [
+      "Google Ads",
+      "SEO Growth",
+      "Analytics",
+      "Meta Ads"
+    ]
   },
   {
     "id": "cat-10",
@@ -97,7 +169,15 @@
     "icon": "Cpu",
     "description": "ARM Cortex, STM32, RTOS, IoT protocols, Arduino, and Automotive firmware.",
     "accentColor": "#059669",
-    "bgGradient": "from-teal-600 to-green-700"
+    "bgGradient": "from-teal-600 to-green-700",
+    "logo": "/images/domains/embedded.svg",
+    "internetSource": "https://raw.githubusercontent.com/devicons/devicon/master/icons/arduino/arduino-original.svg",
+    "popularTech": [
+      "ARM Cortex",
+      "STM32",
+      "Arduino",
+      "RTOS"
+    ]
   },
   {
     "id": "cat-11",
@@ -107,7 +187,15 @@
     "icon": "GitMerge",
     "description": "Docker, Kubernetes, GitHub Actions, CI/CD, Ansible, and Observability.",
     "accentColor": "#4F46E5",
-    "bgGradient": "from-indigo-600 to-violet-800"
+    "bgGradient": "from-indigo-600 to-violet-800",
+    "logo": "/images/domains/devops.svg",
+    "internetSource": "https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg",
+    "popularTech": [
+      "Docker",
+      "Kubernetes",
+      "GitHub Actions",
+      "CI/CD"
+    ]
   },
   {
     "id": "cat-12",
@@ -117,6 +205,14 @@
     "icon": "CheckCircle2",
     "description": "Automation testing with Selenium, Playwright, Cypress, TestNG, and JMeter.",
     "accentColor": "#2563EB",
-    "bgGradient": "from-blue-500 to-cyan-700"
+    "bgGradient": "from-blue-500 to-cyan-700",
+    "logo": "/images/domains/testing.svg",
+    "internetSource": "https://raw.githubusercontent.com/devicons/devicon/master/icons/selenium/selenium-original.svg",
+    "popularTech": [
+      "Selenium",
+      "Playwright",
+      "Cypress",
+      "TestNG"
+    ]
   }
 ]

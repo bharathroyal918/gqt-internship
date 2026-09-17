@@ -11,7 +11,7 @@ export default function FloatingWhatsApp() {
   const handleSend = (e: React.FormEvent) => {
     e.preventDefault();
     const encoded = encodeURIComponent(message || "Hello GQT Internship Team, I need assistance with my VTU internship application.");
-    window.open(`https://wa.me/919845012345?text=${encoded}`, "_blank");
+    window.open(`https://wa.me/919448403469?text=${encoded}`, "_blank");
     setIsOpen(false);
     setMessage("");
   };

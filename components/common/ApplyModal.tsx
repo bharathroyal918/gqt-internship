@@ -28,13 +28,13 @@ export default function ApplyModal({
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
-    name: "Rohan M. Patil",
-    usn: "1RV22CS089",
-    email: "rohan.patil@student.rvce.ac.in",
-    phone: "+91 98451 23456",
-    college: "RV College of Engineering",
-    degree: "B.Tech in Computer Science & Engg",
-    cgpa: "8.65",
+    name: "Bharath Royal",
+    usn: "23785A3102",
+    email: "bharath.royal@student.rvs",
+    phone: "+91 9182583234",
+    college: "RVS University",
+    degree: "B.Tech in Artificial Intelligence & Data Science",
+    cgpa: "9.05",
     github: "https://github.com/rohanpatil",
     linkedin: "https://linkedin.com/in/rohanpatil",
     hasNocApproval: true,
@@ -82,7 +82,7 @@ export default function ApplyModal({
       description={
         submitted
           ? "Your application is currently active under recruiter review."
-          : `VTU Curriculum Internship Application for ${internship.title}`
+          : `GQT Curriculum Internship Application for ${internship.title}`
       }
       maxWidth="2xl"
     >

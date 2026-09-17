@@ -9,6 +9,7 @@ import { Internship, Company } from "@/types";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import ApplyModal from "@/components/common/ApplyModal";
+import CompanyLogo from "@/components/common/CompanyLogo";
 import { Accordion, AccordionItem } from "@/components/ui/Accordion";
 import {
   Building2,
@@ -88,8 +89,8 @@ export default function InternshipDetailsPage({
         <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-soft mb-8">
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
             <div className="flex items-start gap-4">
-              <div className="h-16 w-16 sm:h-20 sm:w-20 rounded-2xl bg-blue-50 border border-slate-200/80 flex items-center justify-center font-extrabold text-brand-blue text-xl flex-shrink-0">
-                {internship.company.slice(0, 2).toUpperCase()}
+              <div className="p-1 rounded-2xl bg-white border border-slate-200/80 shadow-xs flex-shrink-0">
+                <CompanyLogo name={internship.company} size="xl" />
               </div>
               <div className="space-y-1.5">
                 <div className="flex flex-wrap items-center gap-2">
@@ -98,7 +99,7 @@ export default function InternshipDetailsPage({
                   </span>
                   <Badge variant="default">{internship.category}</Badge>
                   <Badge variant="navy">{internship.mode}</Badge>
-                  <Badge variant="success">VTU Accredited</Badge>
+                  <Badge variant="success">Pan-India Accredited</Badge>
                 </div>
                 <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
                   {internship.title}
@@ -319,8 +320,8 @@ export default function InternshipDetailsPage({
                   About Hiring Company
                 </h3>
                 <div className="flex items-center gap-3">
-                  <div className="h-12 w-12 rounded-xl bg-blue-50 border border-slate-200 flex items-center justify-center font-bold text-brand-blue">
-                    {company.name.slice(0, 2).toUpperCase()}
+                  <div className="p-1 rounded-xl bg-white border border-slate-200 shadow-xs flex-shrink-0">
+                    <CompanyLogo name={company.name} size="md" />
                   </div>
                   <div>
                     <h4 className="font-bold text-slate-900 text-sm">{company.name}</h4>

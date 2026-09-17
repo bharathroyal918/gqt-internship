@@ -2,12 +2,12 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Modal } from "@/components/ui/Modal";
 import {
-  GraduationCap,
   Building2,
   Lock,
   Mail,
@@ -60,16 +60,23 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen bg-brand-slate flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md text-center mb-6">
-        <Link href="/" className="inline-flex items-center gap-2.5 group">
-          <div className="h-12 w-12 rounded-2xl bg-brand-navy text-white flex items-center justify-center shadow-soft group-hover:scale-105 transition-transform">
-            <GraduationCap className="h-6 w-6 text-amber-400" />
+        <Link href="/" className="inline-flex items-center gap-3.5 group">
+          <div className="bg-white p-2.5 rounded-2xl shadow-soft border border-slate-200/90 group-hover:scale-105 transition-transform inline-flex items-center justify-center flex-shrink-0">
+            <Image
+              src="/images/gqt-logo.jpeg"
+              alt="GQT Logo"
+              width={120}
+              height={42}
+              className="h-11 w-auto object-contain"
+              priority
+            />
           </div>
           <div className="text-left">
-            <span className="font-extrabold text-lg text-brand-navy block leading-tight">
-              GLOBAL QUEST
+            <span className="font-extrabold text-2xl text-brand-navy block leading-none">
+              GQT <span className="text-brand-blue">Internship</span>
             </span>
-            <span className="text-xs text-slate-500 font-semibold tracking-wider uppercase">
-              Technologies Portal
+            <span className="text-xs text-slate-500 font-semibold tracking-wider uppercase mt-1 block">
+              Candidate & Student Portal
             </span>
           </div>
         </Link>

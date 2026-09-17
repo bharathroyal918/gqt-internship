@@ -22,47 +22,47 @@ import { toast } from "sonner";
 
 export default function StudentProfilePage() {
   const [profile, setProfile] = useState({
-    name: "Rohan M. Patil",
-    email: "rohan.patil@student.rvce.ac.in",
-    phone: "+91 98451 23456",
+    name: "Bharath Royal",
+    email: "bharath@gmail.com",
+    phone: "+91 9182583234",
     dob: "2004-05-14",
     gender: "Male",
-    address: "BTM 2nd Stage, Bengaluru - 560076",
-    college: "RV College of Engineering",
-    usn: "1RV22CS089",
+    address: "Yelahanka, Bengaluru - 560064",
+    college: "RVS university",
+    usn: "23785A3102",
     degree: "Bachelor of Engineering (B.E.)",
-    branch: "Computer Science & Engineering",
+    branch: "Artificial Intelligence",
     cgpa: "8.65",
     batch: "2026",
-    github: "https://github.com/rohanpatil",
-    linkedin: "https://linkedin.com/in/rohanpatil",
-    portfolio: "https://rohanpatil.dev",
+    github: "https://github.com/bharathroyal918",
+    linkedin: "https://linkedin.com/in/bharathroyal",
+    portfolio: "https://bharathroyal.dev",
   });
 
   const [skills, setSkills] = useState([
-    "Java",
-    "Spring Boot",
+    "Python",
+    "Django",
     "React 19",
     "Next.js",
     "Node.js",
     "PostgreSQL",
     "Docker",
-    "AWS Core",
+    "DSA",
   ]);
   const [newSkill, setNewSkill] = useState("");
 
   const [projects, setProjects] = useState([
     {
       id: "p1",
-      title: "VTU Smart Campus Ledger",
-      tech: "Next.js, FastAPI, PostgreSQL",
-      desc: "Decentralized transcript validation system with QR verification adopted by 3 departments.",
+      title: "Public Transport Delay Prediction",
+      tech: "Python, React.js, Next.js, FastAPI, PostgreSQL, AI & ML",
+      desc: "Predicted bus delays using deep learning models to improve commuter experience.",
     },
     {
       id: "p2",
-      title: "Automated Microservices Health Orchestrator",
-      tech: "Spring Boot, Kafka, Docker",
-      desc: "Real-time anomaly detector and alerting framework with Slack webhooks.",
+      title: "Student Portal",
+      tech: "python, React.js, Next.js, FastAPI, PostgreSQL",
+      desc: "Online platform for students to access resources, submit assignments, and track progress.",
     },
   ]);
 

@@ -41,18 +41,18 @@ export default function CircularBoard() {
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-brand-blue text-xs font-bold uppercase tracking-wider mb-2">
               <BellRing className="h-3.5 w-3.5" />
-              <span>Official Circulars & Notice Board</span>
+              <span>Pan-India Drives & Announcements</span>
             </div>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-              University Notifications & Guidelines
+              National Internship Drives & Announcements
             </h2>
             <p className="text-sm text-slate-500 mt-1">
-              Stay informed with real-time academic circulars, internship drive schedules, and viva norms.
+              Real-time updates on nationwide corporate hiring cohorts, specialization bootcamps, and application schedules for students across India.
             </p>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-xs text-slate-500 hidden sm:inline">
-              Updated Daily from VTU Registrar Cell
+            <span className="text-xs text-slate-500 hidden sm:inline font-medium">
+              Updated Daily • All-India Opportunities
             </span>
           </div>
         </div>
@@ -80,7 +80,7 @@ export default function CircularBoard() {
                 className="text-xs text-brand-blue hover:text-brand-blue-hover self-start sm:self-auto"
                 onClick={() => setSelectedCircular(circularsData[0] as Circular)}
               >
-                <span>Read Latest Guideline</span>
+                <span>Read Latest Announcement</span>
                 <ChevronRight className="h-3.5 w-3.5" />
               </Button>
             </div>

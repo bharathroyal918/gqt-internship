@@ -93,7 +93,7 @@ export default function StudentDashboardLayout({
               </span>
               <span className="text-xs text-slate-400 hidden sm:inline">|</span>
               <span className="text-xs text-slate-600 font-medium">
-                RV College of Engineering (USN: 1RV22CS089)
+                RVS University (USN: 23785A3102)
               </span>
             </div>
           </div>
@@ -112,11 +112,11 @@ export default function StudentDashboardLayout({
               className="flex items-center gap-2 p-1.5 pr-3 rounded-xl hover:bg-slate-100 transition-colors"
             >
               <div className="h-8 w-8 rounded-full bg-brand-blue text-white font-bold flex items-center justify-center text-xs">
-                RP
+                BR
               </div>
               <div className="hidden sm:block text-left text-xs">
-                <p className="font-bold text-slate-800 leading-tight">Rohan Patil</p>
-                <p className="text-[10px] text-slate-400">8th Sem • CSE</p>
+                <p className="font-bold text-slate-800 leading-tight">Bharath Royal</p>
+                <p className="text-[10px] text-slate-400">8th Sem • AIML</p>
               </div>
             </Link>
           </div>
@@ -131,16 +131,16 @@ export default function StudentDashboardLayout({
             {/* Student Profile Card preview */}
             <div className="p-3 bg-slate-50 rounded-xl mb-4 text-center">
               <div className="h-14 w-14 rounded-full bg-gradient-to-br from-brand-blue to-brand-navy text-white font-bold flex items-center justify-center mx-auto mb-2 text-base shadow-sm">
-                RP
+                BR
               </div>
-              <h4 className="font-bold text-slate-900 text-sm">Rohan M. Patil</h4>
-              <p className="text-[11px] text-slate-500">RV College of Engineering</p>
+              <h4 className="font-bold text-slate-900 text-sm">Bharath Royal</h4>
+              <p className="text-[11px] text-slate-500">RVS University</p>
               <div className="mt-2.5 pt-2.5 border-t border-slate-200/60 flex items-center justify-between text-[11px] text-slate-600">
                 <span>Profile Strength</span>
-                <span className="font-bold text-emerald-700">85%</span>
+                <span className="font-bold text-emerald-700">90%</span>
               </div>
               <div className="w-full bg-slate-200 h-1.5 rounded-full mt-1 overflow-hidden">
-                <div className="bg-emerald-500 h-full rounded-full w-[85%]" />
+                <div className="bg-emerald-500 h-full rounded-full w-[90%]" />
               </div>
             </div>
 
